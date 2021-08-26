@@ -1,0 +1,7 @@
+const path = require("path");
+
+// O caminho de onde será salvo e executado as migrations
+module.exports = {
+  config: path.resolve(__dirname, "src", "config", "database.js"), // Onde será executada as migrations
+  "migrations-path": path.resolve(__dirname, "src", "database", "migrations") // Onde será armazenada as migrations
+}
