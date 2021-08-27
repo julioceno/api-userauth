@@ -16,13 +16,13 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
         unique: true,
-        allowNull: false,
-        lowercase: true,
+        allowNull: false, 
+        lowercase: true, 
       },
       password: {
         type: Sequelize.STRING,
         allowNull: false,
-        select: false
+        select: false // Isso significa que quando eu buscar um usuário ou uma lista de usuário, eu não quero que o password venha junto
       },
       created_at: {
         type: Sequelize.DATE,
