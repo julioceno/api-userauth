@@ -24,6 +24,14 @@ module.exports = {
         allowNull: false,
         select: false // Isso significa que quando eu buscar um usuário ou uma lista de usuário, eu não quero que o password venha junto
       },
+      password_reset_token: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      password_reset_expires: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
