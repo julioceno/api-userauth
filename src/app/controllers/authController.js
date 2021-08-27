@@ -1,16 +1,8 @@
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
-const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const mailer = require("../../modules/mailer");
-
-function tokenGenerate(params) {
-  const token = jwt.sign(params, process.env.SECRET, {
-    expiresIn: 86400,
-  })
-
-  return token;
-};
+const tokenGenerate = require("../functions/tokenGenerate")
 
 module.exports = {
   async store(req, res) {
